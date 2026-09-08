@@ -239,16 +239,34 @@ async function calculateBMI(){
     }
 
     const response =
-    await fetch(
-    "https://bmi-calculator-o97t.onrender.com.onrender.com/calculate",
-    {
+await fetch(
+"https://bmi-calculator-o97t.onrender.com/calculate",
+{
+    method:"POST",
 
-        method:"POST",
+    headers:{
+    "Content-Type":
+    "application/json"
+    },
 
-        headers:{
-        "Content-Type":
-        "application/json"
-        },
+    body:JSON.stringify({
+
+        name:name,
+        height:height,
+        weight:weight
+
+    })
+}
+);
+
+const text =
+await response.text();
+
+alert(text);
+
+console.log(text);
+
+return;
 
         body:JSON.stringify({
 
