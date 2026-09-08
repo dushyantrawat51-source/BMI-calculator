@@ -17,7 +17,6 @@ CORS(app)
 
 FILE_NAME = "bmi_records.xlsx"
 
-
 @app.route("/")
 def home():
     return "BMI Backend Running"
@@ -85,7 +84,6 @@ def calculate():
     • Exercise regularly
     • Monitor weight progress
     """
-``
     record = {
 
         "Name": name,
@@ -117,7 +115,6 @@ def calculate():
     "advice": advice
 
     })
-
 
 if __name__ == "__main__":
     app.run(debug=True)
