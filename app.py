@@ -4,7 +4,7 @@ import pandas as pd
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app,origins=["https://dushyantrawat51-source.github.io"])
 
 FILE_NAME = "bmi_records.xlsx"
 
