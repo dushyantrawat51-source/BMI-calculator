@@ -1,13 +1,5 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
-from flask import send_file
-@app.route("/download")
-def download():
-
-    return send_file(
-        FILE_NAME,
-        as_attachment=True
-    )
 
 import pandas as pd
 import os
@@ -16,6 +8,8 @@ app = Flask(__name__)
 CORS(app)
 
 FILE_NAME = "bmi_records.xlsx"
+
+
 @app.route("/")
 def home():
     return "BMI Backend Running"
@@ -31,10 +25,6 @@ def download():
         FILE_NAME,
         as_attachment=True
     )
-
-@app.route("/")
-def home():
-    return "BMI Backend Running"
 
 
 @app.route("/calculate", methods=["POST"])
