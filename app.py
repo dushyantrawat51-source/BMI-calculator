@@ -116,7 +116,7 @@ def calculate():
     "category": category,
     "advice": advice
 
-    })
+})
 
 if __name__ == "__main__":
     app.run(debug=True)
