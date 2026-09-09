@@ -22,7 +22,11 @@ def download():
 @app.route("/")
 def home():
     return "BMI Backend Running"
-
+@app.route("/test")
+def test():
+    return jsonify({
+        "status": "working"
+    })
 
 @app.route("/calculate", methods=["POST"])
 def calculate():
